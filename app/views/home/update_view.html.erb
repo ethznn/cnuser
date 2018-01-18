@@ -1,0 +1,28 @@
+<div class="container" style="padding-top:100px">
+    <p id="notice"><%= notice %></p>
+    <form action="/home/update/<%=@update_view.id%>" method="post">
+        
+      <div class="form-group">
+        <label for="exampleInputEmail1 mt-5">글 쓴 이</label>
+        <input type="text" name="writer" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=@update_view.post_name%>">
+      </div>
+      
+      <div class="form-group">
+        <label for="exampleInputEmail1 mt-5">비 밀 번 호</label>
+        <input type="password" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="비 밀 번 호">
+      </div>
+  
+      <div class="form-group">
+        <label for="exampleInputPassword1">제 목</label>
+        <input type="text" name="title" class="form-control" id="exampleInputPassword1" value="<%=@update_view.post_title%>">
+      </div>
+      
+      <div class="form-group">
+        <label for="comment">내 용</label>
+        <textarea class="form-control" name="content" rows="5" id="comment"><%=@update_view.post_content%></textarea>
+      </div>
+      <a href="/home/body/<%=@update_view.id%>"><button type="button"  class="btn btn-primary" style="float:right;">뒤로가기</button></a>
+      <button type="submit" class="btn btn-primary" style="float:right;"data-confirm="정말로 수정하시겠습니까?">수정</button>
+      
+</form>
+</div>

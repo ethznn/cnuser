@@ -1,0 +1,74 @@
+<section id="body">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="mt-0 text-primary">League of Legends</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="container postoverall">
+        <div class="form-group row">
+          <label for="example-text-input" class="offset-md-2 col-md-2 col-form-label">글 쓴 이</label>
+          <div class="col-md-5 card">
+              <div class="card-block titlebox">
+               <p class="card-text"> <%= @one_post.post_name %></p>
+              </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="offset-md-2 col-md-2 col-form-label">제 목</label>
+          <div class="col-md-5 card">
+              <div class="card-block titlebox">
+                <p class="card-text"><%= @one_post.post_title %></p>
+              </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="offset-md-2 col-md-2 col-form-label">내 용</label>
+          <div class="col-md-5 card">
+              <div class="card-block titlebox">
+                  <p class="card-text"><%= @one_post.post_content %></p>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+            <a href="/home/update_view/<%= @one_post.id %>" class="offset-md-7" ><button type="button"  class="btn btn-primary">수정</button></a> 
+            <a href="/home/destroy_view/<%= @one_post.id %>"><button type="button"  class="btn btn-primary">삭제</button></a>  
+            <a href="/home/board_lol"><button type="button"  class="btn btn-primary">뒤로가기</button></a>
+        </div>
+        <div class="container wow fadeInUp">
+          <table class="table">
+            <thead>
+              <tr>
+                <td style="width:20%">글쓴이</td>
+                <td style="width:50%">내용</td>
+                <td style="width:20%">시간</td>
+              </tr>
+            </thead>
+            <tbody>
+              <% @one_post.replies.each do |p| %>
+                  <tr>
+                    <td><%= p.name %></td>
+                    <td><%= p.content %></td>
+                    <td style="font-size:70%"><%= p.created_at %></td>
+                  </tr>
+              <%end%>
+            
+            </tbody>
+          </table>
+          </div>
+        <form action="/home/reply" method="post">
+            <input type="hidden" name="post_id" value="<%= @one_post.id %>">
+            <div class="form-group row mt-4 ">
+                  <label for="comment" class="offset-md-2 col-md-2 col-form-label">이 름</label>
+                  <textarea class="form-control col-md-5" name="name" rows="1" id="comment" placeholder="이 름"></textarea>
+            </div>
+            <div class="form-group row">
+                  <label for="comment" class="offset-md-2 col-md-2 col-form-label">내 용</label>
+                  <textarea class="form-control col-md-5" name="content" rows="4" id="comment" placeholder="내 용"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary offset-md-8">등 록</button>
+        </form>
+    </div>
+</section>

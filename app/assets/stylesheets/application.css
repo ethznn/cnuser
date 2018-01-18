@@ -1,0 +1,545 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Hanna', sans-serif;
+    color: #001A33;
+    webkit-tap-highlight-color: #222;
+    top:0;
+}
+
+/* workaround modal-open padding issue */
+body.modal-open {
+    padding-right:0 !important;
+}
+
+hr {
+    max-width: 120px;
+    border-width: 3px;
+    opacity: 0.08;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+hr.light {
+    border-color: #fff;
+    opacity: 1;
+}
+
+hr.primary {
+    border-color: #007FFF;
+    opacity: 1;
+}
+
+a {
+    color: #007FFF;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+a:hover,
+a:focus {
+    color: #222;
+    outline: 0;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+.wide-space {
+    letter-spacing: 1.6px;
+}
+
+.icon-lg {
+    font-size: 50px;
+    line-height: 18px;
+}
+
+.bg-primary {
+    background-color: #007FFF;
+}
+
+.bg-alt {
+    background-color: #fff;
+}
+
+.text-faded {
+    color: rgba(245,245,245,0.7);
+}
+
+.text-dark {
+    color: #001A33;
+}
+
+.text-light {
+    color: #fff;
+}
+
+.text-light:hover,.text-light:focus {
+    color: #eee;
+    text-decoration:none;
+}
+
+.text-primary {
+    color: #007FFF;
+}
+
+section {
+    padding: 70px 0;
+}
+
+aside {
+    padding: 45px 0;
+}
+
+footer {
+    padding: 45px;
+    padding-top: 40px;
+    background-color: #e0e0e3;
+}
+
+footer h4, footer h6 {
+    color:#fff;
+}
+
+.navbar {
+    border-color: rgba(35,35,35,.05);
+    background-color: #fff;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    transition: all .4s;
+}
+
+.navbar-brand {
+    color: #007FFF;
+    padding: 1px;
+    line-height: 1.90em;
+    -webkit-transition: padding .2s ease-in;
+    -moz-transition: padding .2s ease-in;
+    transition: padding .2s ease-in;
+    float:none;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: #007FFF;
+}
+
+.navbar .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #001A33;
+}
+.navbar .navbar-toggle, .navbar-default .navbar-collapse {
+    border-color: transparent;
+}
+
+.navbar .navbar-nav > li>a,
+.navbar .navbar-nav>li>a:focus {
+    font-size: 12px;
+    color: #001A33;
+    text-transform: uppercase;
+}
+
+.navbar .navbar-nav>li>a:hover,
+.navbar .navbar-nav>li>a:focus:hover {
+    color: #007FFF;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link.active:focus {
+    color: #007FFF !important;
+    background-color: transparent;
+}
+
+/* responsive nav */
+@media(max-width:48em) {
+    .navbar .navbar-nav>.nav-item {
+        float: none;
+        margin-left: .1rem;
+    }
+    .navbar .navbar-nav {
+        float:none !important;
+    }
+}
+
+@media(min-width:48em) {
+    .navbar {
+        border-color: transparent;
+        background-color: #fff;
+        min-height: 60px;
+    }
+
+    .navbar-brand {
+        color: #007FFF;
+        float: left;
+        padding-left: 1px;
+    }
+
+    .navbar .navbar-brand:hover,
+    .navbar .navbar-brand:focus {
+        color: #001A33;
+    }
+    
+    .navbar .navbar-nav > li > a,
+    .navbar .navbar-nav> li > a:focus {
+        color: #001A33;
+        letter-spacing: 1.1px;
+    }
+
+    .navbar .navbar-nav > li > a:hover,
+    .navbar .navbar-nav > li > a:focus:hover {
+        color: #001A33;
+    }
+
+    #topNav {
+      background-color:#fff;
+    }
+    
+}
+
+header {
+    position: relative;
+    min-height: auto;
+    text-align: center;
+    color: #001A33;
+    width: 100%;
+    background-color: #fff;
+}
+
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+    z-index: 2;
+}
+
+header .header-content .inner h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+header .header-content .inner h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+header .header-content .inner h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+header .header-content .inner p {
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #222;
+}
+.card {
+    col:1;
+    col-md:1;
+}
+.explain{
+    position:center;
+    width:500px;
+}
+
+@media(min-width:34em) {
+    .icon-lg {
+        font-size: 80px;
+    }
+    
+    header {
+        min-height: 100%;
+    }
+
+    header .header-content {
+        position: absolute;
+        top: 50%;
+        padding: 0 50px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    header .header-content .inner {
+        margin-right: 0;
+        margin-left: 0;
+        max-width: 1000px;
+    }
+
+    header .header-content .inner h1 {
+        font-size: 53px;
+    }
+
+    header .header-content .inner p {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 80%;
+        font-size: 18px;
+    }
+    
+    section {
+        min-height: 600px;
+        padding: 100px 0;
+    }
+
+}
+
+.list-group-item, .card-footer {
+    background-color:transparent;
+}
+
+textarea {
+    resize: none;
+}
+
+.call-to-action h2 {
+    margin: 0 auto 20px;
+}
+
+.btn.btn-primary {
+    background-color: transparent;
+    border:1px solid #007FFF;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+    color:#007FFF;
+}
+
+.btn.btn-primary:hover {
+    opacity: 0.7;
+}
+
+.btn-primary-outline {
+    border-color:#007FFF;
+    color:#007FFF;
+}
+.btn-primary-outline:hover {
+    background-color:#007FFF;
+}
+
+.btn-xl {
+    padding: 15px 30px;
+    font-size: 20px;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    color: #fff;
+    background: #222;
+}
+
+::selection {
+    text-shadow: none;
+    color: #fff;
+    background: #222;
+}
+
+img::selection {
+    color: #fff;
+    background: 0 0;
+}
+
+img::-moz-selection {
+    color: #fff;
+    background: 0 0;
+}
+
+#cnu_logo{
+    width:70%
+}
+
+.source{
+    color:grey;
+
+}
+
+.inner{
+    position:center;
+}
+
+.card-title{
+    text-align: center;;
+}
+
+.postoverall{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.titlebox{
+    padding: 8px 8px 8px 8px;
+    text-align: center;
+    height:auto;
+    clear:both;
+    word-break:break-all;
+    
+}
+.clear{clear:both;}
+.col-form-label{
+    text-align: center;
+    
+}
+
+table {
+    text-align: center;
+}
+th {
+    text-align: center;
+}
+.row{
+    margin-left:0px;
+    margin-right:0px;
+}
+
+.listpage{
+    padding-left:0;
+    padding-right:0;
+}
+.postoverall{
+    width:100%;
+}
+.search-bar {
+    display:flex;
+    justify-content:center;
+}
+.search {
+    width:200px;
+    height:35;
+}
+.search-button{
+    height:35px;
+}
+
+.digg_pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  cursor: default;
+  /* self-clearing method: */ }
+  .digg_pagination a, .digg_pagination span, .digg_pagination em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .digg_pagination .disabled {
+    color: #999999;
+    border: 1px solid #dddddd; }
+  .digg_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #2e6ab1;
+    color: white;
+    border: 1px solid #2e6ab1; }
+  .digg_pagination a {
+    text-decoration: none;
+    color: #105cb6;
+    border: 1px solid #9aafe5; }
+    .digg_pagination a:hover, .digg_pagination a:focus {
+      color: #000033;
+      border-color: #000033; }
+  .digg_pagination .page_info {
+    background: #2e6ab1;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+    .digg_pagination .page_info b {
+      color: #000033;
+      background: #6aa6ed;
+      padding: 0.1em 0.25em; }
+  .digg_pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .digg_pagination {
+    height: 1%; }
+  *:first-child + html .digg_pagination {
+    overflow: hidden; }
+
+.apple_pagination {
+  background: #f1f1f1;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 1em;
+  cursor: default; }
+  .apple_pagination a, .apple_pagination span {
+    padding: 0.2em 0.3em; }
+  .apple_pagination .disabled {
+    color: #aaaaaa; }
+  .apple_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background-color: #bebebe;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
+  .apple_pagination a {
+    text-decoration: none;
+    color: black; }
+    .apple_pagination a:hover, .apple_pagination a:focus {
+      text-decoration: underline; }
+
+.flickr_pagination {
+  text-align: center;
+  padding: 0.3em;
+  cursor: default; }
+  .flickr_pagination a, .flickr_pagination span, .flickr_pagination em {
+    padding: 0.2em 0.5em; }
+  .flickr_pagination .disabled {
+    color: #aaaaaa; }
+  .flickr_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    color: #ff0084; }
+  .flickr_pagination a {
+    border: 1px solid #dddddd;
+    color: #0063dc;
+    text-decoration: none; }
+    .flickr_pagination a:hover, .flickr_pagination a:focus {
+      border-color: #003366;
+      background: #0063dc;
+      color: white; }
+  .flickr_pagination .page_info {
+    color: #aaaaaa;
+    padding-top: 0.8em; }
+  .flickr_pagination .previous_page, .flickr_pagination .next_page {
+    border-width: 2px; }
+  .flickr_pagination .previous_page {
+    margin-right: 1em; }
+  .flickr_pagination .next_page {
+    margin-left: 1em; }
+    
+    

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Required meta tags -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <meta name="description" content="One page Bootstrap 4 theme to show What&#39;s new in Bootstrap 4. Discover new features like cards, the xl grid tier, em sizing and how to convert from Bootstrap 3." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Codeply">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+  <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+  <!-- FontAwesome-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <title>CNUsers</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+
+
+    
+    
+
+    
+
+
+
+
+
+</head>
+<body class="bg-faded">
+  <nav id="topNav" class="navbar fixed-top navbar-toggleable-sm">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span>☰</span>
+        </button>
+        <a class="navbar-brand page-scroll" href="/home/index">CNUsers</a>
+        <div class="collapse navbar-collapse" id="collapsingNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="/home/board_lol">board</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="/home/list">list</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="/home/request">Request</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<%= yield %>
+  
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+</body>
+</html>

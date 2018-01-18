@@ -1,0 +1,26 @@
+<header id="index">
+        <div class="header-content row justify-content-center">
+            <div class="inner col-12 col-sm-12 col-md-4 col-lg-4">
+                <img src="/assets/cnu_logo.png" id="cnu_logo" class="rounded mx-auto d-block" alt="...">
+                <h1 style="color:#1d85ff">CNUsers</h1>
+                <h5 class="wow fadeIn text-normal wow fadeIn">게임을 사랑하는 전남대학교</br>학생들의 즐거운 커뮤니티임</h5>
+                    <a href="/home/board_lol" class="btn btn-primary mt-4">Go in!</a>
+            </div>
+            <div class="row col-12 col-sm-12 col-md-6 col-lg-6 justify-content-center">
+                <div class="inner col-6 col-sm-6 col-md-6 col-lg-6 mt-5">
+                    <h6><i class="fa fa-desktop" aria-hidden="true"></i> 온라인 게임 순위</h6>
+                    <% 10.times do |x| %>
+                        <h6 style="font-size:12px"><%=x+1%>위 <%=@online_game_rank_list[x]%></h6>
+                    <% end %>
+                    <h8 class="source" style="font-size:10px">출처:onlinegamesoonwe.com</h8>
+                </div>
+                <div class="inner col-6 col-sm-6 col-md-6 col-lg-6 mt-5">
+                    <h6><i class="fa fa-mobile " aria-hidden="true"></i> 모바일 게임 순위</h6>
+                    <% 10.times do |y| %>
+                        <h6 style="font-size:12px"><%=y+1%>위 <%=@mobile_game_rank_list[y]%></h6>
+                    <% end %>
+                    <h8 class="source" style="font-size:10px">출처:gevolution.co.kr</h8>
+                </div>
+            </div>
+        </div>
+</header>
